@@ -14,7 +14,9 @@
         </tr>
         </thead>
         <tbody>
-        <?php $i=1; ?>
+        @php
+           $i=1; 
+        @endphp 
         @foreach ($admin_data as $a)
         
         <tr>
@@ -22,7 +24,9 @@
             <td><a style="text-decoration:none" href="{{route('user.detail',['id'=>encrypt($a->id)])}}">{{$a->name}}</a></td>
             <td>{{$a->email}}</td>
         </tr>
-        <?php $i++; ?>   
+        @php
+           $i++; 
+        @endphp  
         @endforeach
         </tbody>
     </table>
